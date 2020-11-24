@@ -17,6 +17,8 @@ So, the steps are (using the Arduino IDE):
 6. Load this code, "IcomToYaesuBandData."
 7. Connect analog port A0 (output of the DAC) to the band data of the amplifier.
 8. Connect digital port D13 to the amplifier's PTT (through a buffer - remember -- there is an LED load already on this port.)
+I suggest a 2n2222 or 2n4125 or similar buffer transistor.  Connect D13 through a 1000 ohm resistor to the base of the transistor,
+connect the emitter to ground, and the collector to the amplifier PTT line.  This also handles level shifting for the 3v D13 port.
 9. On the radio, go to Menu, Set, Bluetooth Set, Pairing/Connect, Device Search, Search Data Device, ESP32test, Connect-Yes.
 10.  As you change frequencies on the radio, the amplifier's bands should automatically switch.
 11.  As you press PTT on the radio, the amplifier's PTT should follow.

@@ -7,6 +7,8 @@ This code was developed for Arduino's Nano 33 Iot.  This board has a Bluetooth E
 
 First, follow the procedure at "[This Link](https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/)" to load the esp-idf support to your Windows computer.  This allows the Arduino IDE to be able to load software to the ESP computer in step 4 below.
 
+EDIT: Also - make SURE you are using a USB3.0 port on your Windows computer.  USB2.0 won't work!
+
 So, the steps are (using the Arduino IDE):
 
 1. Set the board to "Arduino Nano 33 Iot" (under SAMD 32 bit ....)
@@ -14,6 +16,7 @@ So, the steps are (using the Arduino IDE):
 3.  Change the board to "u-Blox NINA W-10" (under ESP32 Arduino.)
 4.  Load the NINA W-10 computer with "SerialToSerialBT" example (under Bluetooth Serial.)
 5. Change the board back to "Arduino Nano 33 Iot."
+EDIT: 5.5 Double click the reset button on the IOT 33.  Set the "Port" to the NEW serial port that shows up!
 6. Load this code, "IcomToYaesuBandData."
 7. Connect analog port A0 (output of the DAC) to the band data of the amplifier.
 8. Connect digital port D13 to the amplifier's PTT (through a buffer - remember -- there is an LED load already on this port.)

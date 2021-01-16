@@ -167,6 +167,8 @@ void setup() {
   // Set analog output pin to 0V.
   setBand(0);
 
+  // Give time for Windows 10 to initialize
+  delay(5000);
   count = 0;
   timer = millis();
   oldfrequency = -1;
